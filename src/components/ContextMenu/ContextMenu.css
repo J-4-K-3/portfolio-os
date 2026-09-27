@@ -1,0 +1,113 @@
+.context-menu {
+  position: absolute;
+
+  z-index: 10000;
+
+  width: 235px;
+
+  padding: 5px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.55);
+
+  border-radius: 9px;
+
+  background: rgba(
+    248,
+    248,
+    250,
+    0.97
+  );
+
+  box-shadow:
+    0 16px 40px
+      rgba(0, 0, 0, 0.2),
+    0 3px 10px
+      rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  animation:
+    context-menu-in
+    100ms ease-out;
+}
+
+.context-menu button {
+  width: 100%;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 9px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #3b3b3f;
+
+  text-align: left;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.context-menu button:hover:not(:disabled) {
+  background: #e7e7ea;
+}
+
+.context-menu button:active:not(:disabled) {
+  transform: scale(
+    0.99
+  );
+}
+
+.context-menu button:disabled {
+  color: #b0b0b5;
+
+  cursor: default;
+}
+
+.context-menu button span {
+  flex: 1;
+}
+
+.context-menu kbd {
+  color: #99999f;
+
+  font-family: inherit;
+
+  font-size: 8px;
+}
+
+.context-divider {
+  height: 1px;
+
+  margin: 4px 5px;
+
+  background: #e4e4e7;
+}
+
+@keyframes context-menu-in {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.97)
+      translateY(-2px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}

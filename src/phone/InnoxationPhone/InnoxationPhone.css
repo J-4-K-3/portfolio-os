@@ -1,0 +1,278 @@
+.innoxation-phone-root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  background: #050505;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+
+  touch-action: auto;
+}
+
+.innoxation-device-shell {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #050505;
+
+  isolation: isolate;
+}
+
+.innoxation-os-placeholder {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.innoxation-os-placeholder-mark {
+  margin-bottom: 12px;
+
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.innoxation-os-placeholder-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+}
+
+.innoxation-os-placeholder-subtitle {
+  margin-top: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+
+  opacity: 0.55;
+}
+
+/*
+  Desktop portfolio presentation.
+
+  The OS itself remains full viewport on phones.
+  On larger screens we present it as a physical device
+  so the portfolio still feels like a device environment.
+*/
+
+@media (min-width: 600px) {
+  .innoxation-phone-root {
+    padding: 32px;
+
+    background:
+      radial-gradient(
+        circle at center,
+        #202020 0%,
+        #090909 48%,
+        #020202 100%
+      );
+  }
+
+  .innoxation-device-shell {
+    width: min(430px, 72vw);
+    height: min(860px, 88dvh);
+
+    border-radius: 42px;
+
+    box-shadow:
+      0 35px 100px rgba(0, 0, 0, 0.65),
+      0 0 0 1px rgba(255, 255, 255, 0.08);
+
+    transform: translateZ(0);
+  }
+}
+
+@media (min-width: 1000px) {
+  .innoxation-device-shell {
+    width: min(520px, 42vw);
+    height: min(920px, 90dvh);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 999px) {
+  .innoxation-phone-root {
+    padding: 12px;
+  }
+
+  .innoxation-device-shell {
+    width: min(92vw, 900px);
+    height: min(92dvh, 520px);
+
+    border-radius: 32px;
+  }
+}
+
+.innoxation-phone-environment {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #050505;
+
+  isolation: isolate;
+}
+
+.innoxation-phone-home {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.innoxation-phone-home__background {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 193, 77, 0.15),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(118, 95, 255, 0.13),
+      transparent 32%
+    ),
+    #08080a;
+}
+
+.innoxation-phone-home__glow {
+  position: absolute;
+
+  width: 40%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  opacity: 0.35;
+}
+
+.innoxation-phone-home__glow--one {
+  left: -8%;
+  top: 10%;
+
+  background: rgba(255, 177, 75, 0.45);
+}
+
+.innoxation-phone-home__glow--two {
+  right: -10%;
+  top: 40%;
+
+  background: rgba(108, 89, 255, 0.42);
+}
+
+.innoxation-phone-home__glow--three {
+  left: 30%;
+  bottom: -12%;
+
+  background: rgba(255, 91, 164, 0.32);
+}
+
+.innoxation-phone-home__content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+.innoxation-phone-home__label {
+  font-size: 10px;
+  font-weight: 650;
+
+  letter-spacing: 0.28em;
+
+  opacity: 0.45;
+}
+
+.innoxation-phone-home__title {
+  margin-top: 12px;
+
+  font-size: 32px;
+  font-weight: 300;
+
+  letter-spacing: -0.04em;
+}
+
+.innoxation-phone-home__hint {
+  margin-top: 9px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 9px;
+}
+
+/*
+  Surface wrapper used by all future phone OS surfaces.
+
+  Keeping this layer independent lets us later add:
+  - app transitions
+  - surface history
+  - multitasking
+  - lock/unlock animations
+  - tablet layouts
+  without coupling those systems to individual apps.
+*/
+
+.innoxation-phone-surface {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .innoxation-phone-home__glow {
+    animation: none;
+  }
+}
+/* The active runtime must define the percentage-height containing block
+   used by the phone surface and its absolutely positioned screens. */
+.innoxation-phone-runtime {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,224 @@
+.mac-window {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 220px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
+  background: rgba(245, 245, 248, 0.88);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.32),
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+
+  user-select: none;
+
+  animation: mac-window-open 180ms ease-out;
+}
+
+.mac-window-dragging,
+.mac-window-resizing {
+  transition: none;
+}
+
+.mac-window-maximized {
+  inset: 28px 0 0 0;
+
+  width: auto !important;
+  height: auto !important;
+
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+.mac-window-titlebar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 38px;
+  min-height: 38px;
+
+  padding: 0 12px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  background: rgba(240, 240, 243, 0.78);
+
+  cursor: default;
+}
+
+.mac-window-dragging .mac-window-titlebar {
+  cursor: grabbing;
+}
+
+.mac-window-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  width: 70px;
+}
+
+.mac-window-control {
+  width: 13px;
+  height: 13px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: transparent;
+
+  transition:
+    transform 120ms ease,
+    filter 120ms ease;
+}
+
+.mac-window-control:hover {
+  transform: scale(1.08);
+  filter: brightness(0.94);
+}
+
+.mac-window-control:active {
+  transform: scale(0.92);
+}
+
+.mac-window-close {
+  background: #ff5f57;
+}
+
+.mac-window-minimize {
+  background: #febc2e;
+}
+
+.mac-window-maximize {
+  background: #28c840;
+}
+
+.mac-window-control svg {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mac-window-titlebar:hover .mac-window-control svg {
+  opacity: 0.72;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.mac-window-title {
+  position: absolute;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  transform: translateX(-50%);
+
+  max-width: 45%;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: rgba(0, 0, 0, 0.72);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  pointer-events: none;
+}
+
+.mac-window-title-icon {
+  width: 16px;
+  height: 16px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.mac-window-title-spacer {
+  flex: 1;
+}
+
+.mac-window-content {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  user-select: text;
+}
+
+.mac-window-resize-handle {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 18px;
+  height: 18px;
+
+  cursor: nwse-resize;
+
+  opacity: 0.45;
+}
+
+.mac-window-resize-handle::before,
+.mac-window-resize-handle::after {
+  content: "";
+
+  position: absolute;
+
+  right: 4px;
+  bottom: 4px;
+
+  width: 8px;
+  height: 1px;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  transform: rotate(-45deg);
+}
+
+.mac-window-resize-handle::after {
+  right: 4px;
+  bottom: 8px;
+
+  width: 5px;
+}
+
+@keyframes mac-window-open {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

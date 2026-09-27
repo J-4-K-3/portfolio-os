@@ -1,0 +1,557 @@
+/*.mac-menu-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 9px;
+
+  background: rgba(242, 242, 244, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #202020;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "Segoe UI",
+    sans-serif;
+
+  user-select: none;
+}
+
+.mac-menu-left,
+.mac-menu-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.mac-menu-left {
+  gap: 2px;
+}
+
+.mac-menu-apple,
+.mac-menu-app-name,
+.mac-menu-item,
+.mac-status-button {
+  height: 24px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: 11px;
+}
+
+.mac-menu-apple {
+  width: 28px;
+  justify-content: center;
+}
+
+.mac-menu-app-name {
+  padding: 0 8px;
+  font-weight: 650;
+}
+
+.mac-menu-item {
+  padding: 0 8px;
+}
+
+.mac-menu-apple:hover,
+.mac-menu-app-name:hover,
+.mac-menu-item:hover,
+.mac-status-button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.mac-menu-right {
+  gap: 2px;
+}
+
+.mac-status-button {
+  width: 27px;
+  justify-content: center;
+}
+
+.mac-menu-date,
+.mac-menu-time {
+  padding: 0 5px;
+  font-size: 10px;
+}
+
+.mac-dropdown-menu {
+  position: absolute;
+  top: 27px;
+  left: 8px;
+
+  min-width: 190px;
+
+  padding: 5px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+
+  background: rgba(250, 250, 252, 0.96);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(20px);
+
+  z-index: 20;
+}
+
+.mac-dropdown-menu button {
+  width: 100%;
+  height: 28px;
+
+  padding: 0 9px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #222;
+
+  cursor: pointer;
+
+  text-align: left;
+  font-size: 11px;
+}
+
+.mac-dropdown-menu button:hover {
+  background: #d9d9de;
+}
+
+.mac-dropdown-title {
+  padding: 6px 9px 7px;
+
+  color: #777;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mac-dropdown-divider {
+  height: 1px;
+
+  margin: 5px 4px;
+
+  background: #ddd;
+}
+
+.mac-menu-search {
+  position: absolute;
+
+  top: 34px;
+  right: 80px;
+
+  width: 230px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 9px;
+
+  background: rgba(250, 250, 252, 0.96);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.mac-menu-search svg {
+  color: #777;
+}
+
+.mac-menu-search input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #222;
+
+  font-size: 12px;
+}
+
+.mac-status-popover {
+  position: absolute;
+
+  top: 34px;
+  right: 9px;
+
+  width: 225px;
+
+  padding: 14px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 11px;
+
+  background: rgba(250, 250, 252, 0.96);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(20px);
+
+  font-size: 11px;
+}
+
+.mac-status-popover strong {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+}
+
+.mac-status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mac-status-row span:nth-child(2) {
+  flex: 1;
+}
+
+.mac-status-popover small {
+  display: block;
+  margin-top: 7px;
+
+  color: #888;
+}
+
+.mac-battery-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+}*/
+
+.mac-menubar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 28px;
+
+  z-index: 20000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px;
+
+  background: rgba(235, 235, 240, 0.72);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+
+  color: rgba(0, 0, 0, 0.82);
+
+  font-size: 12px;
+
+  user-select: none;
+}
+
+.mac-menubar-left,
+.mac-menubar-right {
+  display: flex;
+  align-items: center;
+}
+
+.mac-menubar-left {
+  gap: 2px;
+}
+
+.mac-menubar-right {
+  gap: 3px;
+}
+
+.mac-menubar-apple,
+.mac-menubar-item,
+.mac-status-button {
+  height: 23px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.mac-menubar-apple {
+  width: 27px;
+}
+
+.mac-menubar-item {
+  padding: 0 9px;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mac-menubar-apple:hover,
+.mac-menubar-item:hover,
+.mac-menubar-item.active {
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.mac-status-button {
+  width: 25px;
+}
+
+.mac-status-button:hover {
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.mac-menubar-date,
+.mac-menubar-time {
+  padding-left: 7px;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mac-menu-dropdown {
+  position: fixed;
+
+  top: 28px;
+  left: 7px;
+
+  min-width: 190px;
+
+  padding: 5px;
+
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+
+  background: rgba(247, 247, 249, 0.94);
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.2),
+    0 3px 10px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  animation: mac-menu-appear 120ms ease-out;
+}
+
+.mac-menu-apple-dropdown {
+  min-width: 210px;
+}
+
+.mac-menu-item {
+  width: 100%;
+  height: 29px;
+
+  padding: 0 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: rgba(0, 0, 0, 0.82);
+
+  font-size: 12px;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.mac-menu-item:hover {
+  background: #1677ff;
+  color: white;
+}
+
+.mac-menu-item-icon {
+  width: 18px;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0.8;
+}
+
+.mac-menu-divider {
+  height: 1px;
+
+  margin: 4px 5px;
+
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.mac-status-popover {
+  position: fixed;
+
+  top: 35px;
+  right: 72px;
+
+  width: 230px;
+
+  padding: 15px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 13px;
+
+  background: rgba(247, 247, 249, 0.94);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  animation: mac-menu-appear 120ms ease-out;
+}
+
+.mac-status-title {
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mac-status-main {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mac-status-secondary {
+  margin-top: 5px;
+
+  color: rgba(0, 0, 0, 0.5);
+
+  font-size: 11px;
+}
+
+.mac-search-popover {
+  position: fixed;
+
+  top: 35px;
+  right: 35px;
+
+  width: 300px;
+
+  padding: 9px 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 11px;
+
+  background: rgba(247, 247, 249, 0.95);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  animation: mac-menu-appear 120ms ease-out;
+}
+
+.mac-search-popover input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 13px;
+}
+
+.mac-search-result {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: rgba(247, 247, 249, 0.96);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.16);
+
+  font-size: 12px;
+}
+
+@keyframes mac-menu-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .mac-menubar-item:nth-of-type(n + 5) {
+    display: none;
+  }
+
+  .mac-menubar-date {
+    display: none;
+  }
+}

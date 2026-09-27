@@ -1,0 +1,252 @@
+.mac-safari {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(
+        90,
+        100,
+        160,
+        0.2
+      ),
+      transparent 45%
+    ),
+    #f7f7fa;
+
+  color: #292932;
+}
+
+.mac-safari-toolbar {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 12px;
+
+  border-bottom: 1px solid
+    rgba(0, 0, 0, 0.08);
+
+  background: rgba(
+    245,
+    245,
+    248,
+    0.88
+  );
+}
+
+.mac-safari-navigation {
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+}
+
+.mac-safari-navigation button,
+.mac-safari-new-tab {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #55555e;
+
+  cursor: pointer;
+}
+
+.mac-safari-navigation button:hover,
+.mac-safari-new-tab:hover {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.07
+  );
+}
+
+.mac-safari-navigation button:disabled {
+  opacity: 0.3;
+
+  cursor: default;
+}
+
+.mac-safari-address {
+  flex: 1;
+
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  border: 1px solid
+    rgba(0, 0, 0, 0.1);
+
+  border-radius: 8px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  );
+
+  color: #85858e;
+}
+
+.mac-safari-address input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #44444c;
+
+  font-family: inherit;
+
+  font-size: 9px;
+}
+
+.mac-safari-page {
+  position: relative;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+}
+
+.mac-safari-page-glow {
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: rgba(
+    130,
+    140,
+    210,
+    0.12
+  );
+
+  filter: blur(70px);
+}
+
+.mac-safari-eyebrow,
+.mac-safari-page h1,
+.mac-safari-page p,
+.mac-safari-cards {
+  position: relative;
+}
+
+.mac-safari-eyebrow {
+  margin-bottom: 10px;
+
+  color: #777783;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.mac-safari-page h1 {
+  margin: 0;
+
+  font-size: 28px;
+
+  letter-spacing: -1px;
+}
+
+.mac-safari-page p {
+  margin: 9px 0 24px;
+
+  color: #777780;
+
+  font-size: 11px;
+}
+
+.mac-safari-cards {
+  display: flex;
+
+  gap: 9px;
+}
+
+.mac-safari-cards > div {
+  width: 125px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 14px;
+
+  border: 1px solid
+    rgba(0, 0, 0, 0.07);
+
+  border-radius: 10px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.62
+  );
+
+  box-shadow:
+    0 8px 20px
+      rgba(0, 0, 0, 0.05);
+}
+
+.mac-safari-cards strong {
+  font-size: 11px;
+}
+
+.mac-safari-cards span {
+  color: #85858e;
+
+  font-size: 8px;
+
+  line-height: 1.4;
+}
+
+@media (max-width: 650px) {
+  .mac-safari-cards {
+    flex-direction: column;
+  }
+
+  .mac-safari-page h1 {
+    font-size: 21px;
+  }
+}

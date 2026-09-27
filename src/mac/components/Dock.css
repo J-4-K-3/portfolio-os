@@ -1,0 +1,273 @@
+.mac-dock {
+  position: fixed;
+
+  left: 50%;
+  bottom: 12px;
+
+  z-index: 10000;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.mac-dock-inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+
+  min-height: 70px;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 20px;
+
+  background: rgba(235, 235, 240, 0.68);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(26px) saturate(160%);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+
+  pointer-events: auto;
+}
+
+.mac-dock-item,
+.mac-dock-trash {
+  position: relative;
+
+  width: 52px;
+  height: 52px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 14px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transform-origin: bottom center;
+  transform: scale(var(--dock-scale, 1));
+
+  transition:
+    transform 110ms ease,
+    margin 110ms ease;
+}
+
+.mac-dock-item:hover,
+.mac-dock-trash:hover {
+  z-index: 2;
+}
+
+.mac-dock-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: rgba(0, 0, 0, 0.72);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(210, 210, 216, 0.82)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.16),
+    inset 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.mac-dock-item:nth-child(1) .mac-dock-icon {
+  color: #1684f5;
+}
+
+.mac-dock-item:nth-child(2) .mac-dock-icon {
+  color: #147ef5;
+}
+
+.mac-dock-item:nth-child(3) .mac-dock-icon {
+  color: #4b5bd5;
+}
+
+.mac-dock-item:nth-child(4) .mac-dock-icon {
+  color: #e84d8a;
+}
+
+.mac-dock-item:nth-child(5) .mac-dock-icon {
+  color: #222;
+}
+
+.mac-dock-item:nth-child(6) .mac-dock-icon {
+  color: #666;
+}
+
+.mac-dock-tooltip {
+  position: absolute;
+
+  left: 50%;
+  bottom: calc(100% + 13px);
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: rgba(25, 25, 28, 0.88);
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transform:
+    translateX(-50%)
+    translateY(5px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 100ms ease,
+    transform 100ms ease;
+}
+
+.mac-dock-item:hover .mac-dock-tooltip,
+.mac-dock-trash:hover .mac-dock-tooltip {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+.mac-dock-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: -4px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.62);
+
+  transform: translateX(-50%);
+}
+
+.mac-dock-indicator-minimized {
+  opacity: 0.35;
+}
+
+.mac-dock-divider {
+  width: 1px;
+  height: 43px;
+
+  margin: 0 3px 3px;
+
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.mac-dock-trash {
+  --dock-scale: 1;
+}
+
+.mac-trash-icon {
+  position: relative;
+
+  width: 30px;
+  height: 34px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding-bottom: 2px;
+
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  border-top: none;
+
+  border-radius: 0 0 7px 7px;
+}
+
+.mac-trash-icon::before {
+  content: "";
+
+  position: absolute;
+
+  top: -5px;
+  left: -3px;
+
+  width: 32px;
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.mac-trash-icon::after {
+  content: "";
+
+  position: absolute;
+
+  top: -9px;
+  left: 9px;
+
+  width: 10px;
+  height: 4px;
+
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  border-bottom: none;
+
+  border-radius: 4px 4px 0 0;
+}
+
+.mac-trash-icon span {
+  width: 2px;
+  height: 20px;
+
+  margin: 0 3px;
+
+  border-radius: 2px;
+
+  background: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 700px) {
+  .mac-dock-inner {
+    gap: 3px;
+    padding: 7px 8px;
+  }
+
+  .mac-dock-item,
+  .mac-dock-trash {
+    width: 46px;
+    height: 46px;
+  }
+
+  .mac-dock-icon {
+    width: 41px;
+    height: 41px;
+  }
+}

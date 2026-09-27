@@ -1,0 +1,158 @@
+# JACOB B MON
+
+**FULL STACK & AI ENGINEER**
+
+**Open to Relocation — Germany**
+
+---
+
+## PROFILE
+
+Self-taught Full Stack & AI Engineer with **8+ years of programming experience**, focused on building and shipping web, mobile, backend, and AI systems.
+
+Started programming around age 13 and began consistently shipping larger software projects from age 16. Experienced in taking products from concept through architecture, implementation, debugging, deployment, and iteration.
+
+Independent creator behind **Innoxation**, with selected engineering work including Auri, G.R.O.A., N.O.R.M.A.L., and an interactive Portfolio OS.
+
+---
+
+## CORE ENGINEERING
+
+**Full Stack:** React · React Native · Node.js · Python · JavaScript · TypeScript
+**Mobile:** React Native · Expo · Flutter · Android/iOS
+**Backend:** Node.js · FastAPI · REST APIs · Appwrite · Supabase · Firebase
+**AI / ML:** PyTorch · TensorFlow · Transformers · Diffusion · Embeddings · AI inference architecture
+**Data & Infrastructure:** SQL · MongoDB · Redis · Docker · WebAssembly · CDN · Caching · Background Jobs
+**Engineering:** Application Architecture · Debugging · API Integration · Authentication · Rate Limiting · Performance
+
+---
+
+# SELECTED ENGINEERING WORK
+
+## AURI
+
+**Full-Stack Social Platform & Ecosystem**
+
+React Native · Expo · React · Redux · Appwrite · Custom Media Systems
+
+Designed and developed a full-stack social platform centered around connection, community, entertainment, and a calmer social experience.
+
+* Built mobile, frontend, backend, authentication, data, notification, and social functionality.
+* Developed custom video caching using Expo FileSystem with persistent metadata/indexing.
+* Built a network-aware media quality selection system supporting multiple quality representations.
+* Designed local media caching alongside CDN-based delivery.
+* Implemented offline-first behavior for previously available media.
+* Iterated through multiple versions of the platform while debugging and restructuring increasingly complex systems.
+
+**Deployment:** Mobile application distributed through APKPure.
+
+---
+
+## G.R.O.A.
+
+**Global Risk Observation & Analysis**
+
+React · Node.js · Appwrite · Redux · WebAssembly · External APIs
+
+Global information and alert platform aggregating crisis, earthquake, weather, and other risk-related information.
+
+* Integrated and normalized data from multiple external providers.
+* Implemented API timeout and error-handling systems.
+* Built database seeding and synchronization tooling.
+* Developed data transformation, duplicate handling, scheduled operations, and cleanup processes.
+* Built application-level weather alert heuristics while distinguishing them from official warnings.
+* Developed the frontend and supporting backend/data architecture.
+
+**Deployment:** Live web application.
+
+---
+
+## N.O.R.M.A.L.
+
+**Neural Optimized Reasoning Machine for Advanced Learning**
+
+Python · FastAPI · PyTorch · Supabase · Redis · Celery
+
+AI engine and platform under active development within Innoxation.
+
+* Designed modular architecture for APIs, services, model systems, generation, memory, databases, and background tasks.
+* Implemented generation job tracking and model/version management.
+* Built Supabase-backed persistence for jobs, outputs, model versions, training runs, safety events, and API logs.
+* Implemented Redis-backed task ownership and rate limiting.
+* Added request validation, quota controls, prompt policy gates, severity scoring, and review requirements.
+* Designed extensible infrastructure for future local-model image, music, and video generation.
+* Built the project around production-oriented concerns including asset persistence, observability, safety, and model lifecycle management.
+
+**Status:** Active engineering project.
+
+---
+
+## INTERACTIVE PORTFOLIO OS
+
+**Recruiter-Focused Virtual Operating System**
+
+React · Vite · JavaScript · Responsive Web Architecture
+
+Built an interactive portfolio that behaves like a virtual operating system rather than a conventional portfolio website.
+
+* Developed desktop environments and a custom mobile experience.
+* Adapted the interface based on visitor device type.
+* Built application-style navigation and project exploration.
+* Integrated selected engineering projects directly into the OS environment.
+* Designed the experience specifically for recruiters to explore technical work interactively.
+* Provides direct access to CV/resume and deployed projects.
+
+**Recommended experience:** Desktop browser.
+
+**Deployment:** Live web application.
+
+---
+
+# INDEPENDENT ENGINEERING EXPERIENCE
+
+## INNOXATION
+
+**Independent Software Engineer / Founder · 2024–Present**
+
+Independent technology initiative focused on building software across social platforms, AI, mobile, web applications, infrastructure, and digital services.
+
+* Architect and develop software products independently across frontend, mobile, backend, databases, APIs, and AI systems.
+* Learn and adopt technologies according to project requirements.
+* Take projects from initial concept through implementation, debugging, deployment, and iteration.
+* Design reusable systems and ecosystem-level infrastructure across products.
+* Investigate complex technical problems through experimentation, documentation, debugging, and iterative development.
+
+**Selected products:** Auri · G.R.O.A. · N.O.R.M.A.L. · Interactive Portfolio OS
+
+---
+
+# FREELANCE EXPERIENCE
+
+## UPWORK
+
+**Freelance Software Development**
+
+* Completed independent software development work based on client requirements.
+* Communicated technical requirements and implementation details with clients.
+* Researched unfamiliar technologies and approaches when project requirements demanded them.
+* Worked independently across different development environments and technology stacks.
+
+---
+
+# EDUCATION
+
+**Formal Education — Grade 9**
+
+Continued technical education independently through software development, documentation, experimentation, project development, debugging, and continuous self-directed learning.
+
+---
+
+# LANGUAGE
+
+**English — Fluent**
+
+---
+
+**Interactive Portfolio OS — Recommended: Desktop Browser**
+
+Explore selected projects, technical work, and engineering experience through the interactive portfolio environment.

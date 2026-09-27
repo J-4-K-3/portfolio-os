@@ -1,0 +1,259 @@
+.mac-photos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f5f5f7;
+  color: #202124;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Segoe UI",
+    sans-serif;
+}
+
+.mac-photos-toolbar {
+  height: 52px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid #dedee2;
+  background: rgba(250, 250, 252, 0.95);
+}
+
+.mac-photos-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mac-photos-toolbar-button,
+.mac-photos-navigation {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  color: #555;
+  cursor: pointer;
+}
+
+.mac-photos-toolbar-button:hover,
+.mac-photos-navigation:hover {
+  background: #e6e6ea;
+}
+
+.mac-photos-navigation {
+  color: #888;
+}
+
+.mac-photos-title {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mac-photos-search {
+  width: 190px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 9px;
+  border-radius: 8px;
+  background: #e6e6eb;
+  color: #777;
+}
+
+.mac-photos-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #333;
+  font-size: 12px;
+}
+
+.mac-photos-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.mac-photos-sidebar {
+  width: 190px;
+  min-width: 190px;
+  padding: 18px 10px;
+  border-right: 1px solid #dedee2;
+  background: #eeeeF1;
+}
+
+.mac-photos-sidebar-heading {
+  padding: 0 10px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #888;
+}
+
+.mac-photos-album {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #444;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px;
+}
+
+.mac-photos-album:hover {
+  background: #e3e3e8;
+}
+
+.mac-photos-album.active {
+  background: #d9d9df;
+  color: #111;
+  font-weight: 600;
+}
+
+.mac-photos-album small {
+  margin-left: auto;
+  color: #888;
+}
+
+.mac-photos-content {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+  padding: 26px;
+}
+
+.mac-photos-heading {
+  margin-bottom: 22px;
+}
+
+.mac-photos-heading h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 650;
+}
+
+.mac-photos-heading p {
+  margin: 5px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.mac-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
+  gap: 14px;
+}
+
+.mac-photo-card {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: #333;
+}
+
+.mac-photo-preview {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.75);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  overflow: hidden;
+}
+
+.mac-photo-card:hover .mac-photo-preview {
+  transform: scale(1.025);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.mac-photo-card span {
+  display: block;
+  margin-top: 7px;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-gradient-one {
+  background: linear-gradient(135deg, #171717, #444);
+}
+
+.photo-gradient-two {
+  background: linear-gradient(135deg, #ffbf4d, #f76e8e);
+}
+
+.photo-gradient-three {
+  background: linear-gradient(135deg, #101010, #4d6bff);
+}
+
+.photo-gradient-four {
+  background: linear-gradient(135deg, #05070a, #3b82f6);
+}
+
+.photo-gradient-five {
+  background: linear-gradient(135deg, #172554, #60a5fa);
+}
+
+.photo-gradient-six {
+  background: linear-gradient(135deg, #161616, #777);
+}
+
+.photo-gradient-seven {
+  background: linear-gradient(135deg, #222, #9c7cff);
+}
+
+.photo-gradient-eight {
+  background: linear-gradient(135deg, #080808, #bcbcbc);
+}
+
+.mac-photo-viewer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.mac-photo-viewer-image {
+  width: min(650px, 80%);
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.mac-photo-viewer-image span {
+  font-size: 17px;
+  font-weight: 600;
+}
+.mac-photo-viewer{position:absolute;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(12,13,19,.96)}.mac-photo-viewer:fullscreen{position:fixed;inset:0;width:100vw;height:100vh}.mac-photo-viewer-toolbar{position:absolute;top:0;left:0;right:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:rgba(22,23,31,.95);color:#f5f5f7}.mac-photo-viewer-toolbar>div:first-child{display:flex;flex-direction:column;gap:4px}.mac-photo-viewer-toolbar strong{font-size:11px}.mac-photo-viewer-toolbar small{color:#a4a5ad;font-size:9px}.mac-photo-viewer-toolbar>div:last-child{display:flex;gap:3px}.mac-photo-viewer-toolbar button,.mac-photo-viewer-arrow{width:32px;height:32px;display:grid;place-items:center;border:0;border-radius:7px;background:transparent;color:#eee;cursor:pointer}.mac-photo-viewer-toolbar button:hover,.mac-photo-viewer-arrow:hover{background:rgba(255,255,255,.14)}.mac-photo-viewer-arrow{position:absolute;top:50%;z-index:1;width:42px;height:42px;transform:translateY(-50%);background:rgba(255,255,255,.08)}.mac-photo-viewer-arrow.previous{left:15px}.mac-photo-viewer-arrow.next{right:15px}.mac-photo-viewer-image{width:min(70%,850px);height:min(70%,550px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;border-radius:15px;color:rgba(255,255,255,.92);font-size:clamp(20px,3vw,38px);font-weight:650}.mac-photo-viewer-image svg{width:64px;height:64px;opacity:.7}

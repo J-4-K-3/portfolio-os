@@ -1,0 +1,353 @@
+.natter-app {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(110, 151, 255, 0.16),
+      transparent 34%
+    ),
+    linear-gradient(
+      160deg,
+      #0b101c 0%,
+      #090b12 48%,
+      #07080d 100%
+    );
+
+  color: #ffffff;
+  scrollbar-width: none;
+}
+
+.natter-app::-webkit-scrollbar {
+  display: none;
+}
+
+.natter-app__header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  background: rgba(7, 8, 13, 0.65);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.natter-app__back,
+.natter-app__compose {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.natter-app__back {
+  font-size: 30px;
+}
+
+.natter-app__compose {
+  font-size: 24px;
+}
+
+.natter-app__back:hover,
+.natter-app__compose:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.natter-app__back:active,
+.natter-app__compose:active {
+  transform: scale(0.9);
+}
+
+.natter-app__title {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.natter-app__title strong {
+  font-size: 14px;
+}
+
+.natter-app__title span {
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 9px;
+}
+
+.natter-app__intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 34px 22px 24px;
+}
+
+.natter-app__avatar {
+  flex: 0 0 72px;
+
+  width: 72px;
+  height: 72px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #788fff,
+      #8c69ff
+    );
+
+  box-shadow:
+    0 20px 50px rgba(104, 113, 255, 0.22);
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.natter-app__eyebrow {
+  margin: 0 0 5px;
+
+  color: #8f9cff;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.natter-app__intro h1 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 0.98;
+  letter-spacing: -1.2px;
+}
+
+.natter-app__intro p:last-child {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.natter-app__conversations {
+  padding: 10px 16px;
+}
+
+.natter-app__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6px 11px;
+}
+
+.natter-app__section-header h2 {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+.natter-app__section-header span {
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 11px;
+}
+
+.natter-app__conversation {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 8px;
+
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: transparent;
+
+  color: white;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.natter-app__conversation:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.natter-app__conversation-avatar {
+  position: relative;
+
+  flex: 0 0 45px;
+
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.natter-app__online {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+
+  width: 11px;
+  height: 11px;
+
+  border: 2px solid #090b12;
+  border-radius: 50%;
+
+  background: #64d89b;
+}
+
+.natter-app__conversation-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.natter-app__conversation-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.natter-app__conversation-top strong {
+  font-size: 12px;
+}
+
+.natter-app__conversation-top time {
+  color: rgba(255, 255, 255, 0.32);
+
+  font-size: 9px;
+}
+
+.natter-app__conversation-body p {
+  overflow: hidden;
+
+  margin: 5px 0 0;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.natter-app__arrow {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 22px;
+}
+
+.natter-app__natalie {
+  width: calc(100% - 32px);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 22px 16px 30px;
+  padding: 15px;
+
+  border: 1px solid rgba(143, 156, 255, 0.18);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(143, 156, 255, 0.13),
+      rgba(140, 105, 255, 0.07)
+    );
+
+  color: white;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.natter-app__natalie > span {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: rgba(143, 156, 255, 0.15);
+
+  color: #a5afff;
+}
+
+.natter-app__natalie div {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.natter-app__natalie strong {
+  font-size: 12px;
+}
+
+.natter-app__natalie small {
+  color: rgba(255, 255, 255, 0.43);
+
+  font-size: 10px;
+}
+
+.natter-app__natalie b {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 21px;
+}

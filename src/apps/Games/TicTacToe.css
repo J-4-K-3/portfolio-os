@@ -1,0 +1,6 @@
+.tictactoe-app { padding: 14px; }
+.tictactoe-app header h2 { margin: 0 0 4px 0; }
+.board { display: grid; grid-template-columns: repeat(3, 72px); gap: 8px; margin-top: 12px; }
+.cell { width: 72px; height: 72px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); background: #fff; font-size: 28px; cursor: pointer; }
+.game-actions { margin-top: 12px; }
+.game-actions button { padding: 8px 12px; border-radius: 6px; border: 0; background: #f0f0f3; cursor: pointer; }

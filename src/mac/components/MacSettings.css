@@ -1,0 +1,247 @@
+.mac-settings {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background: #f5f5f7;
+  color: #222;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Segoe UI",
+    sans-serif;
+}
+
+.mac-settings-sidebar {
+  width: 245px;
+  min-width: 245px;
+  padding: 18px 12px;
+  background: #e9e9ed;
+  border-right: 1px solid #d5d5da;
+}
+
+.mac-settings-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 9px 16px;
+}
+
+.mac-settings-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #777;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.mac-settings-profile strong,
+.mac-settings-profile span {
+  display: block;
+}
+
+.mac-settings-profile strong {
+  font-size: 13px;
+}
+
+.mac-settings-profile span {
+  margin-top: 2px;
+  color: #777;
+  font-size: 10px;
+}
+
+.mac-settings-search {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 9px;
+  border-radius: 7px;
+  background: #dedee3;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.mac-settings-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 11px;
+}
+
+.mac-settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mac-settings-list button {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #444;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px;
+}
+
+.mac-settings-list button:hover {
+  background: #dedee3;
+}
+
+.mac-settings-list button.active {
+  background: #d4d4da;
+  color: #111;
+  font-weight: 600;
+}
+
+.mac-settings-content {
+  flex: 1;
+  overflow: auto;
+  padding: 40px;
+}
+
+.mac-settings-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.mac-settings-heading-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #dedee4;
+  color: #555;
+}
+
+.mac-settings-heading h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.mac-settings-heading p {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.mac-settings-card {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  margin-bottom: 14px;
+  border: 1px solid #dedee2;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.mac-settings-card strong,
+.mac-settings-card p {
+  display: block;
+}
+
+.mac-settings-card strong {
+  font-size: 13px;
+}
+
+.mac-settings-card p {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 11px;
+}
+
+.mac-settings-status {
+  margin-left: auto;
+  color: #777;
+  font-size: 11px;
+}
+
+.mac-settings-segment {
+  margin-left: auto;
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 7px;
+  background: #e5e5e9;
+}
+
+.mac-settings-segment button {
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.mac-settings-segment button.selected {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.mac-settings-toggle {
+  width: 38px;
+  height: 22px;
+  margin-left: auto;
+  padding: 2px;
+  border: 0;
+  border-radius: 20px;
+  background: #aaa;
+  cursor: pointer;
+}
+
+.mac-settings-toggle span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.mac-settings-toggle.active {
+  background: #555;
+}
+
+.mac-settings-toggle.active span {
+  margin-left: 16px;
+}
+
+.mac-settings-about {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 15px;
+  color: #777;
+}
+
+.mac-settings-about strong,
+.mac-settings-about span {
+  display: block;
+}
+
+.mac-settings-about strong {
+  font-size: 11px;
+}
+
+.mac-settings-about span {
+  margin-top: 3px;
+  font-size: 10px;
+}

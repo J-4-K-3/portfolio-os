@@ -1,0 +1,369 @@
+.appgrade-app {
+  min-height: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      150deg,
+      #f4f6ff,
+      #eef1f8
+    );
+
+  color: #222632;
+}
+
+.appgrade-app__header {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 19px 17px 14px;
+}
+
+.appgrade-app__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.appgrade-app__logo {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: white;
+
+  box-shadow:
+    0 8px 25px rgba(35, 42, 65, 0.09);
+}
+
+.appgrade-app__brand > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appgrade-app__brand strong {
+  font-size: 16px;
+}
+
+.appgrade-app__brand span {
+  font-size: 10px;
+  opacity: 0.45;
+}
+
+.appgrade-app__status {
+  padding: 6px 8px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+
+  opacity: 0.5;
+}
+
+.appgrade-app__content {
+  flex: 1;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 15px 18px 28px;
+}
+
+.appgrade-app__intro {
+  padding: 15px 2px 20px;
+}
+
+.appgrade-app__intro > span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  opacity: 0.4;
+}
+
+.appgrade-app__intro h1 {
+  margin: 8px 0 11px;
+
+  font-size: clamp(31px, 8vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.appgrade-app__intro p {
+  max-width: 300px;
+
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  opacity: 0.53;
+}
+
+.appgrade-app__types {
+  display: grid;
+  gap: 8px;
+}
+
+.appgrade-app__types button {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 37px 1fr 15px;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px;
+
+  border: 1px solid rgba(0, 0, 0, 0.045);
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.7);
+  color: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.appgrade-app__types button:active {
+  transform: scale(0.985);
+}
+
+.appgrade-app__types button.is-selected {
+  background: white;
+
+  box-shadow:
+    0 9px 27px rgba(35, 42, 65, 0.08);
+}
+
+.appgrade-app__types button > svg {
+  width: 37px;
+  height: 37px;
+
+  padding: 9px;
+
+  border-radius: 12px;
+
+  background: #f0f2f8;
+}
+
+.appgrade-app__types span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.appgrade-app__types strong {
+  font-size: 12px;
+}
+
+.appgrade-app__types small {
+  font-size: 9px;
+  line-height: 1.35;
+  opacity: 0.48;
+}
+
+.appgrade-app__types i {
+  font-style: normal;
+  font-size: 20px;
+  opacity: 0.28;
+}
+
+.appgrade-app__idea {
+  margin-top: 16px;
+
+  padding: 14px;
+
+  border: 1px solid rgba(0, 0, 0, 0.045);
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.appgrade-app__idea label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  font-weight: 750;
+  opacity: 0.65;
+}
+
+.appgrade-app__idea textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  outline: none;
+  border-radius: 13px;
+
+  padding: 11px;
+
+  background: rgba(255, 255, 255, 0.7);
+  color: inherit;
+
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.appgrade-app__idea button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 9px;
+  padding: 11px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: #222632;
+  color: white;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.appgrade-app__idea button:disabled {
+  cursor: not-allowed;
+  opacity: 0.28;
+}
+
+.appgrade-app__created {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.appgrade-app__created > div {
+  width: 56px;
+  height: 56px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 18px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 28px rgba(35, 42, 65, 0.1);
+}
+
+.appgrade-app__created > span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  opacity: 0.4;
+}
+
+.appgrade-app__created h1 {
+  margin: 8px 0;
+
+  font-size: 34px;
+  letter-spacing: -0.04em;
+}
+
+.appgrade-app__created > p {
+  max-width: 270px;
+
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  opacity: 0.5;
+}
+
+.appgrade-app__created article {
+  width: 100%;
+  max-width: 330px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  box-sizing: border-box;
+
+  margin-top: 18px;
+  padding: 13px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  text-align: left;
+}
+
+.appgrade-app__created article strong {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.appgrade-app__created article span {
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.appgrade-app__created > button {
+  margin-top: 10px;
+
+  border: 0;
+  background: transparent;
+
+  color: inherit;
+
+  font: inherit;
+  font-size: 10px;
+
+  cursor: pointer;
+
+  opacity: 0.55;
+}
+
+@media (min-width: 700px) {
+  .appgrade-app__header,
+  .appgrade-app__content {
+    padding-inline: 30px;
+  }
+}

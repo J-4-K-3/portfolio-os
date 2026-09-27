@@ -1,0 +1,325 @@
+.telvin-app {
+  position: relative;
+
+  height: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(153, 124, 255, 0.22),
+      transparent 40%
+    ),
+    #111218;
+
+  color: #f6f4ff;
+  isolation: isolate;
+}
+
+.telvin-app__ambient {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.telvin-app__orb {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  filter: blur(55px);
+  opacity: 0.28;
+
+  animation: telvinFloat 10s ease-in-out infinite;
+}
+
+.telvin-app__orb--one {
+  top: -90px;
+  right: -60px;
+  background: #8f75ff;
+}
+
+.telvin-app__orb--two {
+  bottom: 15%;
+  left: -110px;
+  background: #54b9ff;
+  animation-delay: -5s;
+}
+
+@keyframes telvinFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(20px, -18px, 0);
+  }
+}
+
+.telvin-app__header {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 19px 17px 13px;
+}
+
+.telvin-app__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.telvin-app__logo {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.telvin-app__brand > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.telvin-app__brand strong {
+  font-size: 16px;
+}
+
+.telvin-app__brand span {
+  font-size: 10px;
+  opacity: 0.46;
+}
+
+.telvin-app__header > button {
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+
+  cursor: pointer;
+}
+
+.telvin-app__content {
+  flex: 1;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 10px 18px 20px;
+}
+
+.telvin-app__welcome {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px 0 35px;
+
+  text-align: center;
+}
+
+.telvin-app__welcome-icon {
+  width: 54px;
+  height: 54px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.telvin-app__eyebrow {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+
+  opacity: 0.42;
+}
+
+.telvin-app__welcome h1 {
+  margin: 8px 0 12px;
+
+  font-size: clamp(30px, 8vw, 43px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.telvin-app__welcome > p {
+  max-width: 300px;
+
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.55;
+
+  opacity: 0.5;
+}
+
+.telvin-app__suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 22px;
+}
+
+.telvin-app__suggestions button {
+  padding: 9px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.055);
+  color: inherit;
+
+  font: inherit;
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.telvin-app__suggestions button:active {
+  transform: scale(0.97);
+}
+
+.telvin-app__conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 12px 0;
+}
+
+.telvin-message {
+  max-width: 82%;
+
+  padding: 11px 13px;
+
+  border-radius: 16px;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.telvin-message--user {
+  align-self: flex-end;
+
+  border-bottom-right-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.telvin-message--telvin {
+  align-self: flex-start;
+
+  border-bottom-left-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.065);
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.telvin-app__composer {
+  flex-shrink: 0;
+
+  display: flex;
+  gap: 8px;
+
+  padding: 9px 14px 15px;
+
+  background: rgba(17, 18, 24, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.telvin-app__composer input {
+  min-width: 0;
+  flex: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  outline: none;
+  border-radius: 15px;
+
+  padding: 11px 13px;
+
+  background: rgba(255, 255, 255, 0.055);
+  color: inherit;
+
+  font: inherit;
+  font-size: 11px;
+}
+
+.telvin-app__composer input::placeholder {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.telvin-app__composer button {
+  width: 41px;
+  height: 41px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #111218;
+
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .telvin-app__header,
+  .telvin-app__content {
+    padding-inline: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .telvin-app__orb {
+    animation: none;
+  }
+}

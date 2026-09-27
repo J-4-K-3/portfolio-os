@@ -1,0 +1,637 @@
+.phone-photos {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(255, 255, 255, 0.08),
+      transparent 35%
+    ),
+    rgba(9, 9, 12, 0.98);
+
+  color:
+    rgba(255, 255, 255, 0.92);
+}
+
+
+/*
+ * Header
+ */
+.phone-photos__header {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    max(18px, env(safe-area-inset-top))
+    18px
+    12px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+  background:
+    rgba(12, 12, 16, 0.7);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+
+.phone-photos__back {
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+
+.phone-photos__back:hover {
+  background:
+    rgba(255, 255, 255, 0.11);
+
+  transform: scale(1.05);
+}
+
+
+.phone-photos__back:active {
+  transform: scale(0.9);
+}
+
+
+.phone-photos__header h1 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+
+.phone-photos__header div {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.phone-photos__header div span {
+  margin-top: 2px;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 10px;
+}
+
+
+.phone-photos__brand {
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+
+/*
+ * Categories
+ */
+.phone-photos__categories {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  gap: 7px;
+
+  padding:
+    11px
+    14px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+
+.phone-photos__categories::-webkit-scrollbar {
+  display: none;
+}
+
+
+.phone-photos__categories button {
+  flex: 0 0 auto;
+
+  padding:
+    8px
+    13px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+
+.phone-photos__categories button.is-active {
+  background:
+    rgba(255, 255, 255, 0.13);
+
+  color:
+    rgba(255, 255, 255, 0.92);
+}
+
+
+.phone-photos__categories button:active {
+  transform: scale(0.94);
+}
+
+
+/*
+ * Gallery
+ */
+.phone-photos__grid {
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+
+  padding: 4px 12px 18px;
+
+  overflow-y: auto;
+
+  align-content: start;
+}
+
+
+.phone-photos__photo {
+  min-width: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 17px;
+
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  color: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+
+.phone-photos__photo:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.1);
+}
+
+
+.phone-photos__photo:active {
+  transform: scale(0.97);
+}
+
+
+.phone-photos__visual {
+  aspect-ratio: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.18),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.025)
+    );
+}
+
+
+.phone-photos__photo--1
+.phone-photos__visual {
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255, 255, 255, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
+    );
+}
+
+
+.phone-photos__photo--2
+.phone-photos__visual {
+  background:
+    radial-gradient(
+      circle at 40% 70%,
+      rgba(255, 255, 255, 0.15),
+      transparent 38%
+    ),
+    linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+
+.phone-photos__photo--3
+.phone-photos__visual {
+  background:
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 255, 255, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.018)
+    );
+}
+
+
+.phone-photos__visual > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size: 21px;
+  font-weight: 650;
+
+  backdrop-filter: blur(12px);
+}
+
+
+.phone-photos__caption {
+  display: flex;
+  flex-direction: column;
+
+  padding:
+    9px
+    10px
+    11px;
+}
+
+
+.phone-photos__caption strong {
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size: 11px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.phone-photos__caption small {
+  margin-top: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.32);
+
+  font-size: 9px;
+}
+
+
+/*
+ * Fullscreen viewer
+ */
+.phone-photos__viewer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+
+  padding:
+    max(18px, env(safe-area-inset-top))
+    18px
+    max(18px, env(safe-area-inset-bottom));
+
+  background:
+    rgba(7, 7, 10, 0.96);
+
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+
+  animation:
+    phone-photos-viewer-in
+    240ms cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+
+.phone-photos__viewer-close {
+  align-self: flex-end;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.86);
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+.phone-photos__viewer-content {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+.phone-photos__viewer-visual {
+  width: min(100%, 520px);
+
+  aspect-ratio: 1;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.15),
+      transparent 40%
+    ),
+    rgba(255, 255, 255, 0.045);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+
+.phone-photos__viewer-visual span {
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  font-size: 38px;
+  font-weight: 700;
+}
+
+
+.phone-photos__viewer-info {
+  display: flex;
+  flex-direction: column;
+
+  width: min(100%, 520px);
+
+  margin: 0 auto;
+}
+
+
+.phone-photos__viewer-info strong {
+  font-size: 18px;
+}
+
+
+.phone-photos__viewer-info span {
+  margin-top: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 11px;
+}
+
+
+.phone-photos__viewer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+
+.phone-photos__viewer-controls button {
+  width: 44px;
+  height: 44px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+
+.phone-photos__viewer-controls span {
+  min-width: 55px;
+
+  text-align: center;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+}
+
+
+@keyframes phone-photos-viewer-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/*
+ * Tablet
+ */
+@media (min-width: 700px) {
+  .phone-photos__header {
+    padding:
+      24px
+      26px
+      14px;
+  }
+
+  .phone-photos__grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 13px;
+
+    padding:
+      6px
+      24px
+      24px;
+  }
+
+  .phone-photos__visual {
+    aspect-ratio: 1.05;
+  }
+
+  .phone-photos__viewer-content {
+    width: min(760px, 100%);
+    margin: 0 auto;
+  }
+
+  .phone-photos__viewer-visual {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+
+/*
+ * Reduced motion
+ */
+@media (prefers-reduced-motion: reduce) {
+  .phone-photos__photo,
+  .phone-photos__back,
+  .phone-photos__viewer {
+    transition-duration: 0.01ms !important;
+    animation: none !important;
+  }
+}

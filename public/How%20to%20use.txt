@@ -1,0 +1,9 @@
+How to use the Interactive Portfolio OS
+
+- Recommended: open in a desktop browser and use full-screen for best experience.
+- Start: Click the Start button in the taskbar to open apps and settings.
+- Files: Use the Files app to browse project folders; open files in VS Code or Notepad.
+- Download Resume/CV: Find the Resume or CV assets in the Downloads folder or on the desktop; click to download.
+- Languages: Use the Settings app to change language (English / German).
+
+(Replace or expand this guide as needed.)

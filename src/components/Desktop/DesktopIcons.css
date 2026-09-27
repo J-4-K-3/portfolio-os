@@ -1,0 +1,72 @@
+.desktop-icons {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 82px;
+  gap: 7px;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 82px;
+  min-height: 78px;
+  padding: 7px 4px;
+  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    transform 160ms ease;
+}
+
+.desktop-icon:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.06);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.desktop-icon:active {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.desktop-icon.is-selected {
+  background: rgba(75, 135, 220, 0.28);
+  border-color: rgba(110, 165, 245, 0.42);
+}
+
+.desktop-icon-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.desktop-icon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.desktop-icon-name {
+  max-width: 76px;
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.desktop-icon-slot{width:82px;min-height:78px;cursor:grab}.desktop-icon-slot:active{cursor:grabbing}.desktop-icon-slot[draggable="true"] .desktop-icon{width:100%}.desktop-icon-slot[draggable="true"]:hover{filter:brightness(1.08)}

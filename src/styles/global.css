@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --app-font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-family: var(--app-font-family);
+  background: #000;
+  color: #fff;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+.windows-os {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  z-index: 1;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(50, 90, 150, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #0a0f18 0%, #101a2a 50%, #05070b 100%);
+}
+
+.desktop-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.desktop-welcome {
+  text-align: center;
+}
+
+.desktop-eyebrow {
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  opacity: 0.5;
+}
+
+.desktop-welcome h1 {
+  margin-bottom: 10px;
+
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.desktop-welcome p:last-child {
+  font-size: 15px;
+  opacity: 0.55;
+}
+
+
+.desktop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 7999;
+  pointer-events: none;
+  background: rgba(0, 0, 0, var(--desktop-dim, 0));
+}
+
+
+/* Settings live preview: desktop backgrounds */
+body.wallpaper-1 .desktop { background: radial-gradient(ellipse at 72% 56%,rgba(62,160,194,.48),transparent 30%),radial-gradient(ellipse at 35% 60%,rgba(37,99,156,.48),transparent 35%),linear-gradient(135deg,#101a2d,#315977 53%,#101722); }
+body.wallpaper-2 .desktop { background: radial-gradient(ellipse at 74% 35%,rgba(255,212,164,.72),transparent 22%),linear-gradient(160deg,#21466e 0%,#5293bd 52%,#e6a68d 100%); }
+body.wallpaper-3 .desktop { background: radial-gradient(ellipse at 68% 32%,rgba(255,192,139,.58),transparent 23%),linear-gradient(145deg,#25234c,#8c557f 57%,#d79772); }
+body.wallpaper-video .desktop { background: radial-gradient(ellipse at 58% 47%,rgba(63,126,114,.42),transparent 34%),linear-gradient(145deg,#122d3d,#355e5a 58%,#83967b); }

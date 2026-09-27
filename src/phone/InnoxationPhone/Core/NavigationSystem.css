@@ -1,0 +1,475 @@
+/*
+ * Innoxation Phone OS
+ * Navigation System
+ *
+ * The CSS now matches NavigationSystem.jsx exactly.
+ *
+ * Hidden by default.
+ * Bottom-edge swipe reveals the compact "<" surface.
+ * Tapping "<" expands the navigation controls.
+ */
+
+.phone-navigation {
+  position: absolute;
+
+  left: 50%;
+  bottom: 12px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 48px;
+
+  transform:
+    translateX(-50%)
+    translateY(calc(100% + 30px));
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+
+  background: rgba(18, 18, 21, 0.48);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.3),
+    inset 0 1px rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    width 430ms cubic-bezier(0.16, 1, 0.3, 1),
+    height 430ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 430ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 220ms ease;
+}
+
+
+/*
+ * Navigation revealed after bottom-edge swipe.
+ */
+.phone-navigation--visible {
+  transform:
+    translateX(-50%)
+    translateY(0);
+
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+
+/*
+ * Expanded navigation.
+ *
+ * Six functional controls:
+ *
+ * Back
+ * Home
+ * Recent
+ * Notifications
+ * Pulse
+ * Settings
+ */
+.phone-navigation--expanded {
+  width: min(390px, calc(100vw - 32px));
+}
+
+
+/*
+ * All navigation controls share the same
+ * interaction language.
+ */
+.phone-navigation__control,
+.phone-navigation__system,
+.phone-navigation__peek {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    opacity 220ms ease;
+}
+
+
+/*
+ * Back / Home / Recent controls.
+ */
+.phone-navigation__control {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+/*
+ * Back control.
+ */
+.phone-navigation__back {
+  font-size: 25px;
+  font-weight: 200;
+}
+
+
+/*
+ * Home control.
+ */
+.phone-navigation__home {
+  font-size: 22px;
+  font-weight: 200;
+}
+
+
+/*
+ * Recent control.
+ */
+.phone-navigation__recent {
+  font-size: 25px;
+  font-weight: 200;
+}
+
+
+/*
+ * Compact "<" state.
+ *
+ * This is the only visible navigation control before
+ * the user explicitly expands the navigation.
+ */
+.phone-navigation__peek {
+  width: 48px;
+  height: 46px;
+
+  font-size: 19px;
+  font-weight: 300;
+}
+
+
+/*
+ * System controls:
+ *
+ * Notifications
+ * Pulse
+ * Settings
+ */
+.phone-navigation__system {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 0 2px;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+}
+
+
+/*
+ * Expanded control row and notification badge.
+ */
+.phone-navigation__controls {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.phone-navigation__badge {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  z-index: 2;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 80, 100, 0.9);
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+
+/*
+ * Notification pulse when notification count changes.
+ */
+.phone-navigation__badge.is-pulsing {
+  animation:
+    phone-navigation-notification-pulse
+    450ms ease;
+}
+
+
+/*
+ * Notification count badge.
+ */
+.phone-navigation__badge {
+  position: absolute;
+
+  top: -2px;
+  right: -3px;
+
+  min-width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+
+  background: rgba(255, 80, 100, 0.9);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/*
+ * Hover / pointer interaction.
+ */
+.phone-navigation__control:hover,
+.phone-navigation__system:hover,
+.phone-navigation__peek:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  transform: scale(1.06);
+}
+
+
+/*
+ * Press feedback.
+ */
+.phone-navigation__control:active,
+.phone-navigation__system:active,
+.phone-navigation__peek:active {
+  transform: scale(0.9);
+}
+
+
+/*
+ * Keyboard focus.
+ */
+.phone-navigation__control:focus-visible,
+.phone-navigation__system:focus-visible,
+.phone-navigation__peek:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.55);
+
+  outline-offset: 2px;
+}
+
+
+/*
+ * Expanded navigation layout.
+ *
+ * The inner controls wrapper distributes the six actions
+ * horizontally across the expanded navigation.
+ */
+.phone-navigation--expanded {
+  gap: 2px;
+
+  padding: 0 8px;
+}
+
+
+/*
+ * In compact mode the Back button exists in the DOM,
+ * but visually the peek control becomes the primary
+ * visible interaction.
+ */
+.phone-navigation:not(
+  .phone-navigation--expanded
+) .phone-navigation__back {
+  display: none;
+}
+
+
+/*
+ * System controls remain compact so all six controls
+ * can fit comfortably without turning the navigation
+ * into a giant bar.
+ */
+.phone-navigation--expanded
+.phone-navigation__system {
+  flex: 0 0 38px;
+}
+
+
+/*
+ * Tablet layout.
+ */
+@media (min-width: 700px) {
+  .phone-navigation {
+    bottom: 18px;
+
+    width: 56px;
+    height: 50px;
+  }
+
+  .phone-navigation--expanded {
+    width: min(410px, calc(100vw - 48px));
+    height: 52px;
+  }
+
+  .phone-navigation__control,
+  .phone-navigation__peek {
+    width: 44px;
+    height: 44px;
+  }
+
+  .phone-navigation--expanded
+  .phone-navigation__system {
+    flex-basis: 40px;
+  }
+
+  .phone-navigation__controls {
+    justify-content: space-around;
+    gap: 5px;
+  }
+}
+
+
+/*
+ * Smaller phones.
+ */
+@media (max-width: 380px) {
+  .phone-navigation--expanded {
+    width: calc(100vw - 20px);
+
+    padding: 0 4px;
+
+    gap: 0;
+  }
+
+  .phone-navigation__control {
+    width: 38px;
+    height: 38px;
+  }
+
+  .phone-navigation--expanded
+  .phone-navigation__system {
+    width: 35px;
+    height: 35px;
+
+    flex-basis: 35px;
+  }
+
+  .phone-navigation__badge {
+    top: -3px;
+    right: -3px;
+
+    min-width: 14px;
+    height: 14px;
+
+    font-size: 8px;
+  }
+}
+
+
+/*
+ * Landscape phones.
+ */
+@media (
+  orientation: landscape
+) and (max-height: 600px) {
+  .phone-navigation {
+    bottom: 8px;
+  }
+
+  .phone-navigation--expanded {
+    height: 46px;
+  }
+
+  .phone-navigation__control,
+  .phone-navigation__system,
+  .phone-navigation__peek {
+    height: 38px;
+  }
+}
+
+
+/*
+ * Notification pulse.
+ */
+@keyframes phone-navigation-notification-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.35);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/*
+ * Reduced motion.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .phone-navigation,
+  .phone-navigation__control,
+  .phone-navigation__system,
+  .phone-navigation__peek {
+    transition-duration: 0.01ms !important;
+  }
+
+  .phone-navigation--expanded
+  .phone-navigation__system
+  .phone-navigation__badge.is-pulsing {
+    animation: none !important;
+  }
+}

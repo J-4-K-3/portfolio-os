@@ -16,10 +16,32 @@ const iconMap = {
 function AppIcon({ app, size = 20 }) {
   const Icon = iconMap[app.id] || Sparkles;
   const source = app.icon;
-  if (typeof source === "string" && /\.(png|jpe?g|webp|svg)$/i.test(source)) {
-    return <img src={source} alt="" />;
+
+  const isImage =
+    typeof source === "string" &&
+    (
+      source.startsWith("data:image/") ||
+      /^https?:\/\//i.test(source) ||
+      /^\/?assets\//i.test(source) ||
+      /\.(png|jpe?g|webp|svg)(\?.*)?$/i.test(source)
+    );
+
+  if (isImage) {
+    return (
+      <img
+        src={source}
+        alt=""
+        width={size}
+        height={size}
+        draggable="false"
+      />
+    );
   }
-  if (typeof source === "string") return <span className="start-emoji">{source}</span>;
+
+  if (typeof source === "string") {
+    return <span className="start-emoji">{source}</span>;
+  }
+
   return <Icon size={size} />;
 }
 

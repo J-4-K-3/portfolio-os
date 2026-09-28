@@ -9,9 +9,9 @@ import { AppRegistryProvider } from "./Core/AppRegistry";
 import { SurfaceManagerProvider } from "./Core/SurfaceManager";
 
 import Viewport from "./Core/Viewport";
-import BootScreen from "./Shell/BootScreen";
-import LockScreen from "./Shell/LockScreen";
-import PhoneSurface from "./Shell/PhoneSurface";
+import BootScreen from "./shell/BootScreen";
+import LockScreen from "./shell/LockScreen";
+import PhoneSurface from "./shell/PhoneSurface";
 import NavigationSystem from "./Core/NavigationSystem";
 
 import "./InnoxationPhone.css";

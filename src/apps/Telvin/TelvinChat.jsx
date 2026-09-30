@@ -322,7 +322,7 @@ const TelvinChat = () => {
             value={input}
             onChange={(event) => setInput(event.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask Telvin anything..."
+            placeholder="Telvin chat is currently in cooldown..."
             rows={1}
             aria-label="Message Telvin"
             disabled

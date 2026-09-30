@@ -3,7 +3,7 @@ import { Plus, Pin, Trash2, StickyNote } from "lucide-react";
 import "./StickyNotes.css";
 const KEY = "innox-sticky-notes";
 function StickyNotes({ initialContent = "" }) {
-  const starter = useMemo(() => [{ id: "recruiter-guide", title: "Welcome, recruiter", content: initialContent || "Welcome to Jacob's portfolio desktop.\n\nStart with the Profile app to learn about Jacob, then open Projects to explore Auri, Natter, and other work.\n\nTip: use the taskbar search, double-click desktop icons, and try the voice assistant. You can read the CV and Resume in Notepad.\n\nThis is a simulated operating system built with React.", color: "yellow", pinned: true }], []);
+  const starter = useMemo(() => [{ id: "recruiter-guide", title: "Welcome, recruiter", content: initialContent || "Welcome to Jacob's portfolio desktop.\n\nStart with the Profile app to learn about Jacob, then open Projects to explore Auri, G.R.O.A and other work.\n\nTip: use the taskbar search, double-click desktop icons, and try the voice assistant. You can read the CV and Resume in Notepad.\n\nThis is a simulated operating system built with React.", color: "yellow", pinned: true }], []);
   const [notes, setNotes] = useState(() => { try { const saved = JSON.parse(localStorage.getItem(KEY)); return Array.isArray(saved) ? saved : starter; } catch { return starter; } });
   const [activeId, setActiveId] = useState(notes[0]?.id);
   const [editingTitle, setEditingTitle] = useState(false);

@@ -1,39 +1,3 @@
-/*import WindowsOS from "./windows/WindowsOS";
-import MacOS from "./mac/MacOS";
-import InnoxationPhone from "./phone/InnoxationPhone/InnoxationPhone";
-import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
-import { Analytics } from "@vercel/analytics/react";
-import { track } from "./utils/analytics";
-
-**
- * Public demo mode hides personal contact details and disables
- * Telvin input so the portfolio can be shared safely.
- * 
- * {PUBLIC_DEMO ? null : <MacOS />}
-   {PUBLIC_DEMO ? null : <InnoxationPhone />}
- *
-const PUBLIC_DEMO =
-  (import.meta.env.VITE_PUBLIC_DEMO || "").toString().toLowerCase() === "true";
-
-if (PUBLIC_DEMO) {
-  try {
-    localStorage.setItem("innox_public_demo", "true");
-  } catch {
-    /* ignore *
-  }
-}
-
-function App() {
-  return (
-    <ErrorBoundary>
-      {PUBLIC_DEMO ? null : <WindowsOS />}
-      {PUBLIC_DEMO ? null : <InnoxationPhone />}
-      <Analytics />
-    </ErrorBoundary>
-  );
-}
-
-export default App;*/
 import WindowsOS from "./windows/WindowsOS";
 import InnoxationPhone from "./phone/InnoxationPhone/InnoxationPhone";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";

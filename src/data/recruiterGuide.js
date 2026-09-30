@@ -1,6 +1,6 @@
 const recruiterGuide = `WELCOME - A QUICK GUIDE FOR RECRUITERS
 
-This portfolio is an interactive desktop built by Jacob B Mongolo. It is designed to make selected engineering work easy to explore in a familiar Windows style.
+This portfolio is an interactive desktop. It is designed to make selected engineering work easy to explore in a familiar Windows style.
 
 START HERE
 1. Open the Start menu from the Windows icon at the bottom left.

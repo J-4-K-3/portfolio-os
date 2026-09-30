@@ -99,7 +99,7 @@ export default function Portfolio({ view = "about", project = "auri" }) {
     <section className="portfolio-profile">
       <aside className="portfolio-sidebar">
         <div className="portfolio-monogram">JM</div>
-        <strong>Jacob B Mon</strong>
+        <strong>Jacob B Mongolo</strong>
         <span>Full Stack & AI Engineer</span>
         <div className="portfolio-location">
           <MapPin size={13} />
@@ -117,10 +117,10 @@ export default function Portfolio({ view = "about", project = "auri" }) {
           )}
         </nav>
 <a
-          href="https://github.com"
+          href="https://github.com/J-4-K-3"
           target="_blank"
           rel="noreferrer"
-          onClick={() => trackExternalClick("github", "https://github.com")}>
+          onClick={() => trackExternalClick("github", "https://github.com/J-4-K-3")}>
           <GitBranchPlus size={14} />
           GitHub
           <ArrowUpRight size={13} />
@@ -164,7 +164,7 @@ export default function Portfolio({ view = "about", project = "auri" }) {
             <BriefcaseBusiness />
             <div>
               <h2>Independent Software Engineer / Founder</h2>
-              <span>Innoxation ? 2024?Present</span>
+              <span>Innoxation - 2024 - Present</span>
               <p>
                 Architects and builds products across frontend, mobile, backend, databases, APIs,
                 AI systems, and infrastructure. Owns work from product concept through implementation

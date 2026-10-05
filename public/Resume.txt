@@ -1,162 +1,221 @@
-# JACOB B MONGOLO
+JACOB B MONGOLO
+FULL STACK & AI ENGINEER
 
-**FULL STACK & AI ENGINEER**
-
-Github: https://github.com/J-4-K-3
-Email: jakemongolo4@gmail.com
-No. +243 860 020 805
-
-**Open to Relocation — Germany**
+GitHub: https://github.com/J-4-K-3
+Email: [jakemongolo4@gmail.com](mailto:jakemongolo4@gmail.com)
+Phone: +243 860 020 805
+Based in DRC · Open to Relocation to Germany
 
 ---
 
-## PROFILE
+## PROFESSIONAL PROFILE
 
-Self-taught Full Stack & AI Engineer with **8+ years of programming experience**, focused on building and shipping web, mobile, backend, and AI systems.
+Self-taught Full Stack & AI Engineer with 8+ years of programming experience and several years of independently building and shipping substantial software products.
 
-Started programming around age 13 and began consistently shipping larger software projects from age 16. Experienced in taking products from concept through architecture, implementation, debugging, deployment, and iteration.
+Experienced across full-stack web and mobile development, backend systems, APIs, databases, AI/ML, application architecture, performance optimization, and CI/CD. Strong at taking software from concept and architecture through implementation, debugging, deployment, and iteration.
 
-Independent creator behind **Innoxation**, with selected engineering work including Auri, G.R.O.A., N.O.R.M.A.L., and an interactive Portfolio OS.
-
----
-
-## CORE ENGINEERING
-
-**Full Stack:** React · React Native · Node.js · Python · JavaScript · TypeScript
-**Mobile:** React Native · Expo · Flutter · Android/iOS
-**Backend:** Node.js · FastAPI · REST APIs · Appwrite · Supabase · Firebase
-**AI / ML:** PyTorch · TensorFlow · Transformers · Diffusion · Embeddings · AI inference architecture
-**Data & Infrastructure:** SQL · MongoDB · Redis · Docker · WebAssembly · CDN · Caching · Background Jobs
-**Engineering:** Application Architecture · Debugging · API Integration · Authentication · Rate Limiting · Performance
+Independent engineer behind Innoxation, with selected projects including Auri, G.R.O.A., N.O.R.M.A.L., and PortfolioOS.
 
 ---
 
-# SELECTED ENGINEERING WORK
+## ENGINEERING FOCUS
 
-## AURI
-
-**Full-Stack Social Platform & Ecosystem**
-
-React Native · Expo · React · Redux · Appwrite · Custom Media Systems
-
-Designed and developed a full-stack social platform centered around connection, community, entertainment, and a calmer social experience.
-
-* Built mobile, frontend, backend, authentication, data, notification, and social functionality.
-* Developed custom video caching using Expo FileSystem with persistent metadata/indexing.
-* Built a network-aware media quality selection system supporting multiple quality representations.
-* Designed local media caching alongside CDN-based delivery.
-* Implemented offline-first behavior for previously available media.
-* Iterated through multiple versions of the platform while debugging and restructuring increasingly complex systems.
-
-**Deployment:** Mobile application distributed through APKPure.
+* Full-Stack Web Development
+* Mobile Application Development
+* Backend & API Engineering
+* AI / ML Systems
+* Application & System Architecture
+* Database & Data Systems
+* Performance & Media Delivery
+* Caching & Offline-First Systems
+* CI/CD & Deployment
+* Debugging & Problem Solving
+* Product Engineering
 
 ---
 
-## G.R.O.A.
+## TECHNICAL SKILLS
+
+**Languages:**
+JavaScript, TypeScript, Python, Dart, Kotlin
+
+**Frontend & Web:**
+React, Next.js, Angular, HTML, CSS, Vite
+
+**Mobile:**
+React Native, Expo, Flutter
+
+**Backend & APIs:**
+Node.js, Python, FastAPI, REST APIs, Appwrite, Supabase, Firebase
+
+**Databases & Storage:**
+SQL, Redis, Appwrite Databases, Supabase, Firebase, Object/File Storage
+
+**AI / ML:**
+PyTorch, TensorFlow, Transformers, Diffusion Models, Embeddings, LoRA, AI Inference Architecture, Reasoning Systems
+
+**Infrastructure & Engineering:**
+Git, GitHub, GitLab, CI/CD, Redis, CDN Architecture, Background Jobs, Caching, WebAssembly
+
+**Engineering Practices:**
+Application Architecture, Debugging, API Integration, Authentication, Rate Limiting, Data Normalization, Error Handling, Performance Optimization, Deployment, Testing
+
+---
+
+## SELECTED ENGINEERING WORK
+
+### Auri
+
+**Full-Stack Social Platform**
+
+**Technologies:** React Native, Expo, React, Redux, JavaScript, Appwrite, CDN, Custom Media Systems
+
+* Designed and developed a full-stack social platform spanning mobile frontend, backend, authentication, data, media, notifications, communities, voice, and games.
+* Built custom video caching using Expo FileSystem with persistent metadata and indexing.
+* Implemented network-aware media quality selection and local/CDN media delivery.
+* Designed offline-first functionality to reduce dependency on continuous network connectivity.
+* Reduced unnecessary external service coupling through custom ecosystem implementations.
+* Reworked and debugged multiple versions of the application while restructuring core systems.
+* Deployed Android builds through APKPure.
+
+### G.R.O.A.
 
 **Global Risk Observation & Analysis**
 
-React · Node.js · Appwrite · Redux · WebAssembly · External APIs
+**Technologies:** React, Node.js, Appwrite, Redux, WebAssembly, JavaScript, External APIs
 
-Global information and alert platform aggregating crisis, earthquake, weather, and other risk-related information.
-
+* Built a data aggregation platform combining crisis, earthquake, weather, geocoding, and other external data sources.
 * Integrated and normalized data from multiple external providers.
-* Implemented API timeout and error-handling systems.
-* Built database seeding and synchronization tooling.
-* Developed data transformation, duplicate handling, scheduled operations, and cleanup processes.
-* Built application-level weather alert heuristics while distinguishing them from official warnings.
-* Developed the frontend and supporting backend/data architecture.
+* Implemented API timeout and error handling for unreliable external services.
+* Built database seeding, synchronization, duplicate handling, scheduled operations, cleanup, and statistics systems.
+* Developed weather-alert heuristics while distinguishing automated signals from official warnings.
+* Designed frontend, backend, database, and data-processing architecture.
+* Deployed as a live web application.
 
-**Deployment:** Live web application.
-
----
-
-## N.O.R.M.A.L.
+### N.O.R.M.A.L.
 
 **Neural Optimized Reasoning Machine for Advanced Learning**
 
-Python · FastAPI · PyTorch · Supabase · Redis · Celery
+**Technologies:** Python, PyTorch, FastAPI, Supabase, Redis, Celery, LoRA
 
-AI engine and platform under active development within Innoxation.
+* Developed an AI engine and platform as part of the Innoxation ecosystem.
+* Built modular AI services covering reasoning, natural language processing, image generation, video generation, memory, and application/website generation.
+* Implemented multiple reasoning levels for different task complexity and interaction requirements.
+* Built FastAPI services for chat, generation, memory, system information, and health functionality.
+* Implemented generation job tracking, model/version management, persistence, and background processing.
+* Used Supabase for persistence across jobs, outputs, model versions, training runs, safety events, and API logs.
+* Used Redis for task ownership, rate limiting, and supporting memory/task infrastructure.
+* Implemented validation, quotas, prompt policy gates, severity scoring, and review requirements.
+* Applied LoRA adaptation to align the system with Innoxation's ecosystem and requirements.
+* Designed the architecture to support external and local AI models.
+* Currently developed as Phase 1 of a larger multi-phase AI system.
 
-* Designed modular architecture for APIs, services, model systems, generation, memory, databases, and background tasks.
-* Implemented generation job tracking and model/version management.
-* Built Supabase-backed persistence for jobs, outputs, model versions, training runs, safety events, and API logs.
-* Implemented Redis-backed task ownership and rate limiting.
-* Added request validation, quota controls, prompt policy gates, severity scoring, and review requirements.
-* Designed extensible infrastructure for future local-model image, music, and video generation.
-* Built the project around production-oriented concerns including asset persistence, observability, safety, and model lifecycle management.
+### PortfolioOS
 
-**Status:** Active engineering project.
+**Interactive Operating-System-Style Portfolio**
 
----
+**Technologies:** React, Vite, JavaScript
 
-## INTERACTIVE PORTFOLIO OS
-
-**Recruiter-Focused Virtual Operating System**
-
-React · Vite · JavaScript · Responsive Web Architecture
-
-Built an interactive portfolio that behaves like a virtual operating system rather than a conventional portfolio website.
-
-* Developed desktop environments and a custom mobile experience.
-* Adapted the interface based on visitor device type.
-* Built application-style navigation and project exploration.
-* Integrated selected engineering projects directly into the OS environment.
-* Designed the experience specifically for recruiters to explore technical work interactively.
-* Provides direct access to CV/resume and deployed projects.
-
-**Recommended experience:** Desktop browser.
-
-**Deployment:** Live web application.
+* Built an interactive portfolio presented as a virtual operating system rather than a conventional website.
+* Designed responsive desktop and mobile interfaces with application-style navigation.
+* Integrated direct access to projects, resume/CV information, and software demonstrations.
+* Implemented custom UI systems, windows, taskbar interactions, notifications, applications, and device-adaptive layouts.
+* Deployed as a live web application.
 
 ---
 
-# INDEPENDENT ENGINEERING EXPERIENCE
+## INDEPENDENT ENGINEERING
 
-## INNOXATION
+### Innoxation
 
-**Independent Software Engineer / Founder · 2024–Present**
+**Independent Software Engineer / Founder**
+2024 – Present
 
-Independent technology initiative focused on building software across social platforms, AI, mobile, web applications, infrastructure, and digital services.
+Independent technology initiative focused on building software across AI, mobile, web, backend systems, digital services, and infrastructure.
 
-* Architect and develop software products independently across frontend, mobile, backend, databases, APIs, and AI systems.
-* Learn and adopt technologies according to project requirements.
-* Take projects from initial concept through implementation, debugging, deployment, and iteration.
-* Design reusable systems and ecosystem-level infrastructure across products.
-* Investigate complex technical problems through experimentation, documentation, debugging, and iterative development.
+* Design and develop products from concept through architecture, implementation, debugging, deployment, and iteration.
+* Build reusable infrastructure and shared systems across multiple products.
+* Develop frontend, mobile, backend, database, API, and AI components.
+* Research and integrate technologies according to product requirements.
+* Design systems focused on performance, scalability, security, reliability, and user experience.
+* Develop and maintain an interconnected software ecosystem spanning multiple applications and platforms.
 
-**Selected products:** Auri · G.R.O.A. · N.O.R.M.A.L. · Interactive Portfolio OS
-
----
-
-# FREELANCE EXPERIENCE
-
-## UPWORK
-
-**Freelance Software Development**
-
-* Completed independent software development work based on client requirements.
-* Communicated technical requirements and implementation details with clients.
-* Researched unfamiliar technologies and approaches when project requirements demanded them.
-* Worked independently across different development environments and technology stacks.
+Selected products include Auri, G.R.O.A., N.O.R.M.A.L., PortfolioOS, and additional applications currently under development.
 
 ---
 
-# EDUCATION
+## FREELANCE DEVELOPMENT
 
-**Formal Education — Grade 9**
+### Upwork
 
-Continued technical education independently through software development, documentation, experimentation, project development, debugging, and continuous self-directed learning.
+**Independent Software Developer**
+
+* Developed software based on client requirements.
+* Translated technical requirements into implementation plans and working software.
+* Researched unfamiliar technologies and frameworks when required.
+* Worked independently across different technology stacks and project requirements.
 
 ---
 
-# LANGUAGE
+## ENGINEERING DEVELOPMENT
 
-**English — Fluent**
+### Self-Directed Software Engineering
+
+**~2018 – Present**
+
+* Began programming at approximately age 13.
+* Progressively expanded from programming fundamentals into full-stack development, mobile development, backend engineering, APIs, databases, AI/ML, architecture, infrastructure, and deployment.
+* Built increasingly complex software projects independently.
+* Developed strong debugging and problem-solving skills through continuous hands-on engineering.
 
 ---
 
-**Interactive Portfolio OS — Recommended: Desktop Browser**
+## EDUCATION
 
-Explore selected projects, technical work, and engineering experience through the interactive portfolio environment.
+### Self-Directed Software Engineering Education
+
+Independent technical education through continuous software development, research, experimentation, and project-based learning.
+
+**Formal Education:** Grade 9
+
+---
+
+## LANGUAGE
+
+**English:** Fluent
+
+---
+
+## SELECTED CAPABILITIES
+
+**Product Development:**
+Concept → Architecture → Implementation → Debugging → Deployment → Iteration
+
+**Full-Stack Engineering:**
+Frontend → Backend → APIs → Databases → Authentication → Deployment
+
+**AI Engineering:**
+Models → Reasoning → Generation → Memory → Inference → Application Integration
+
+**Systems Engineering:**
+Architecture → Performance → Caching → Background Jobs → CI/CD → Reliability
+
+**Problem Solving:**
+Debugging complex systems, researching unfamiliar technologies, identifying bottlenecks, and building practical solutions.
+
+---
+
+## AVAILABILITY
+
+Open to:
+
+* Full Stack Software Engineer
+* Software Engineer
+* React / Frontend Engineer
+* React Native / Mobile Engineer
+* AI Software Engineer
+* Product Engineer
+* Early-Stage / Founding Engineer
+
+**Location:** DRC
+**Relocation:** Open to Germany and international opportunities
